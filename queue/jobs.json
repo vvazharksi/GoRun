@@ -1,0 +1,82 @@
+[
+  {
+    "job_id": "250601234856204",
+    "pipeline_id": "250601234856451",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "waiting",
+    "enqueued_at": "2025-06-01T23:48:56.843107+03:00",
+    "triggered_by": ""
+  },
+  {
+    "job_id": "250601234856138",
+    "pipeline_id": "250601234856451",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "waiting",
+    "enqueued_at": "2025-06-01T23:48:56.843848+03:00",
+    "triggered_by": ""
+  },
+  {
+    "job_id": "250601234856132",
+    "pipeline_id": "250601234856451",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "waiting",
+    "enqueued_at": "2025-06-01T23:48:56.844273+03:00",
+    "triggered_by": ""
+  },
+  {
+    "job_id": "250601234856084",
+    "pipeline_id": "250601234856451",
+    "project_name": "",
+    "stage": "execute",
+    "name": "myExecuteJob",
+    "status": "waiting",
+    "enqueued_at": "2025-06-01T23:48:56.844627+03:00",
+    "triggered_by": ""
+  },
+  {
+    "job_id": "250601234924548",
+    "pipeline_id": "250601234924190",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "waiting",
+    "enqueued_at": "2025-06-01T23:49:24.434035+03:00",
+    "triggered_by": ""
+  },
+  {
+    "job_id": "250601234924024",
+    "pipeline_id": "250601234924190",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "waiting",
+    "enqueued_at": "2025-06-01T23:49:24.434553+03:00",
+    "triggered_by": ""
+  },
+  {
+    "job_id": "250601234924028",
+    "pipeline_id": "250601234924190",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "waiting",
+    "enqueued_at": "2025-06-01T23:49:24.435062+03:00",
+    "triggered_by": ""
+  },
+  {
+    "job_id": "250601234924006",
+    "pipeline_id": "250601234924190",
+    "project_name": "",
+    "stage": "execute",
+    "name": "myExecuteJob",
+    "status": "waiting",
+    "enqueued_at": "2025-06-01T23:49:24.435525+03:00",
+    "triggered_by": ""
+  }
+]
