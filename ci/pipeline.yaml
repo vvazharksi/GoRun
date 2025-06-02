@@ -1,11 +1,11 @@
 stages:
   - init
-  - execute
+  # - execute
 
 jobs:
   - name: myFirstInitJob
     stage: init
-    image: sandbox
+    image: ubuntu:latest
     vars:
       FIRST_VAR: "foo"
       SECOND_VAR: 4
@@ -21,7 +21,7 @@ jobs:
     stage: init
     dependencies:
       - myFirstInitJob
-    image: sandbox
+    image: ubuntu:latest
     vars:
       FIRST_VAR: "foo"
       SECOND_VAR: "EMV"
@@ -31,7 +31,7 @@ jobs:
 
   - name: myThirdInitJob
     stage: init
-    image: sandbox
+    image: ubuntu:latest
     vars:
       FIRST_VAR: "foo"
       SECOND_VAR: ":)"
@@ -39,14 +39,14 @@ jobs:
       script:
         - echo "Bye!"
 
-  - name: myExecuteJob
-    stage: execute
-    dependencies:
-      - mySecondInitJob
-    image: sandbox
-    vars:
-      FIRST_VAR: "foo"
-      SECOND_VAR: 4
-    action:
-      terraform:
-        dir: my_terraform
+  # - name: myExecuteJob
+  #   stage: execute
+  #   dependencies:
+  #     - mySecondInitJob
+  #   image: sandbox
+  #   vars:
+  #     FIRST_VAR: "foo"
+  #     SECOND_VAR: 4
+  #   action:
+  #     terraform:
+  #       dir: my_terraform

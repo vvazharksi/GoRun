@@ -62,10 +62,15 @@ func main() {
 				Status:      "waiting",
 				EnqueuedAt:  time.Now(),
 				TriggeredBy: job.TriggeredBy,
+				Image:       job.Image,
+				Vars:        job.Vars,
+				Action:      job.Action,
 			}
 			_ = queue.Enqueue(qJob)
 		}
 	}
+
+	pipeline_workflow.StartJobWorker()
 
 }
 

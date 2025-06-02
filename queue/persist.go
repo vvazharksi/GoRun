@@ -3,14 +3,16 @@ package queue
 import (
 	"encoding/json"
 	"os"
+
+	"github.com/vvazharksi/GoRun/config"
 )
 
 func LoadQueue() ([]QueueJob, error) {
-	if _, err := os.Stat(queueFile); os.IsNotExist(err) {
+	if _, err := os.Stat(config.QueueFile); os.IsNotExist(err) {
 		return []QueueJob{}, nil
 	}
 
-	data, err := os.ReadFile(queueFile)
+	data, err := os.ReadFile(config.QueueFile)
 	if err != nil {
 		return nil, err
 	}
@@ -29,5 +31,5 @@ func saveQueue(jobs []QueueJob) error {
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(queueFile, data, 0644)
+	return os.WriteFile(config.QueueFile, data, 0644)
 }

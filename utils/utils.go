@@ -17,3 +17,14 @@ func GenerateTimestampID() string {
 	randomPart := rand.Intn(1000)
 	return fmt.Sprintf("%s%03d", timestamp, randomPart)
 }
+
+// func FindJobByID(jobID string) (*Job, error) {
+// 	for _, p := range LoadedPipelines { // You’ll need a global/sync.Map here ideally
+// 		for _, job := range p.Jobs {
+// 			if job.JobInstanceID == jobID {
+// 				return &job, nil
+// 			}
+// 		}
+// 	}
+// 	return nil, fmt.Errorf("job with ID %s not found", jobID)
+// }

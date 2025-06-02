@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-var queueFile = "queue/jobs.json"
+// var queueFile = "queue/jobs.json"
 var queueLock sync.Mutex
 
 func Enqueue(job QueueJob) error {
@@ -84,4 +84,44 @@ func RemoveJobByID(jobID string) error {
 	}
 
 	return saveQueue(updated)
+}
+
+func UpdateJobStatus(jobID string, status string) error {
+	queueLock.Lock()
+	defer queueLock.Unlock()
+
+	jobs, err := LoadQueue()
+	if err != nil {
+		return err
+	}
+
+	updated := false
+	for i := range jobs {
+		if jobs[i].JobID == jobID {
+			jobs[i].Status = status
+			updated = true
+			break
+		}
+	}
+
+	if !updated {
+		return errors.New("job not found in queue")
+	}
+
+	return saveQueue(jobs)
+}
+
+func GetJobByID(jobID string) (*QueueJob, error) {
+	jobs, err := LoadQueue()
+	if err != nil {
+		return nil, err
+	}
+
+	for _, job := range jobs {
+		if job.JobID == jobID {
+			return &job, nil
+		}
+	}
+
+	return nil, errors.New("job not found in queue")
 }
