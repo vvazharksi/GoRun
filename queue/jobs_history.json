@@ -1,0 +1,499 @@
+[
+  {
+    "job_id": "250605001053583",
+    "pipeline_id": "250605001053317",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:10:53.440187+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": ":)"
+    },
+    "action": {
+      "script": [
+        "echo \"$FIRST_VAR $SECOND_VAR\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001053628",
+    "pipeline_id": "250605001053317",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:10:53.440819+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": 4
+    },
+    "action": {
+      "script": [
+        "echo \"Hello World!\"",
+        "echo \"I am still here\"",
+        "sleep 10\necho \"boo\"\n"
+      ]
+    }
+  },
+  {
+    "job_id": "250605001053655",
+    "pipeline_id": "250605001053317",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:10:53.44132+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": "EMV"
+    },
+    "action": {
+      "script": [
+        "echo \"Wecome!\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001212462",
+    "pipeline_id": "250605001212820",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:12:12.989988+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": ":)"
+    },
+    "action": {
+      "script": [
+        "echo \"$FIRST_VAR $SECOND_VAR\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001212724",
+    "pipeline_id": "250605001212820",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:12:12.990398+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": 4
+    },
+    "action": {
+      "script": [
+        "echo \"Hello World!\"",
+        "echo \"I am still here\"",
+        "sleep 10\necho \"boo\"\n"
+      ]
+    }
+  },
+  {
+    "job_id": "250605001212546",
+    "pipeline_id": "250605001212820",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:12:12.990808+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": "EMV"
+    },
+    "action": {
+      "script": [
+        "echo \"Wecome!\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001238464",
+    "pipeline_id": "250605001238627",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:12:38.537128+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": 4
+    },
+    "action": {
+      "script": [
+        "echo \"Hello World!\"",
+        "echo \"I am still here\"",
+        "sleep 10\necho \"boo\"\n"
+      ]
+    }
+  },
+  {
+    "job_id": "250605001238405",
+    "pipeline_id": "250605001238627",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:12:38.537491+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": ":)"
+    },
+    "action": {
+      "script": [
+        "echo \"$FIRST_VAR $SECOND_VAR\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001238051",
+    "pipeline_id": "250605001238627",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:12:38.538151+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": "EMV"
+    },
+    "action": {
+      "script": [
+        "echo \"Wecome!\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001846132",
+    "pipeline_id": "250605001846976",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:18:46.760279+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": ":)"
+    },
+    "action": {
+      "script": [
+        "echo \"$FIRST_VAR $SECOND_VAR\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001846653",
+    "pipeline_id": "250605001846976",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:18:46.760675+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": 4
+    },
+    "action": {
+      "script": [
+        "echo \"Hello World!\"",
+        "echo \"I am still here\"",
+        "sleep 10\necho \"boo\"\n"
+      ]
+    }
+  },
+  {
+    "job_id": "250605001846120",
+    "pipeline_id": "250605001846976",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:18:46.761006+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": "EMV"
+    },
+    "action": {
+      "script": [
+        "echo \"Wecome!\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001929750",
+    "pipeline_id": "250605001929213",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:19:29.55471+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": ":)"
+    },
+    "action": {
+      "script": [
+        "echo \"$FIRST_VAR $SECOND_VAR\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001929917",
+    "pipeline_id": "250605001929213",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:19:29.555109+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": 4
+    },
+    "action": {
+      "script": [
+        "echo \"Hello World!\"",
+        "echo \"I am still here\"",
+        "sleep 10\necho \"boo\"\n"
+      ]
+    }
+  },
+  {
+    "job_id": "250605001929080",
+    "pipeline_id": "250605001929213",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:19:29.555854+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": "EMV"
+    },
+    "action": {
+      "script": [
+        "echo \"Wecome!\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001947588",
+    "pipeline_id": "250605001947846",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:19:47.500515+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": ":)"
+    },
+    "action": {
+      "script": [
+        "echo \"$FIRST_VAR $SECOND_VAR\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605001947956",
+    "pipeline_id": "250605001947846",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:19:47.500822+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": 4
+    },
+    "action": {
+      "script": [
+        "echo \"Hello World!\"",
+        "echo \"I am still here\"",
+        "sleep 10\necho \"boo\"\n"
+      ]
+    }
+  },
+  {
+    "job_id": "250605001947011",
+    "pipeline_id": "250605001947846",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:19:47.501122+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": "EMV"
+    },
+    "action": {
+      "script": [
+        "echo \"Wecome!\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605002004239",
+    "pipeline_id": "250605002004037",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:20:04.411103+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": 4
+    },
+    "action": {
+      "script": [
+        "echo \"Hello World!\"",
+        "echo \"I am still here\"",
+        "sleep 10\necho \"boo\"\n"
+      ]
+    }
+  },
+  {
+    "job_id": "250605002004874",
+    "pipeline_id": "250605002004037",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:20:04.411471+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": ":)"
+    },
+    "action": {
+      "script": [
+        "echo \"$FIRST_VAR $SECOND_VAR\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605002004029",
+    "pipeline_id": "250605002004037",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:20:04.412212+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": "EMV"
+    },
+    "action": {
+      "script": [
+        "echo \"Wecome!\""
+      ]
+    }
+  },
+  {
+    "job_id": "250605002242233",
+    "pipeline_id": "250605002242981",
+    "project_name": "",
+    "stage": "init",
+    "name": "myFirstInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:22:42.373705+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": 4
+    },
+    "action": {
+      "script": [
+        "echo \"Hello World!\"",
+        "echo \"I am still here\"",
+        "sleep 10\necho \"boo\"\n"
+      ]
+    }
+  },
+  {
+    "job_id": "250605002242914",
+    "pipeline_id": "250605002242981",
+    "project_name": "",
+    "stage": "init",
+    "name": "myThirdInitJob",
+    "status": "failed",
+    "enqueued_at": "2025-06-05T00:22:42.374366+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": ":)"
+    },
+    "action": {
+      "script": [
+        "echo \"$FIRST_VAR $SECOND_VAR\"",
+        "exit 1"
+      ]
+    }
+  },
+  {
+    "job_id": "250605002242987",
+    "pipeline_id": "250605002242981",
+    "project_name": "",
+    "stage": "init",
+    "name": "mySecondInitJob",
+    "status": "done",
+    "enqueued_at": "2025-06-05T00:22:42.374714+03:00",
+    "triggered_by": "",
+    "image": "ubuntu:latest",
+    "vars": {
+      "FIRST_VAR": "foo",
+      "SECOND_VAR": "EMV"
+    },
+    "action": {
+      "script": [
+        "echo \"Wecome!\""
+      ]
+    }
+  }
+]

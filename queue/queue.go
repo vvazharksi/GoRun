@@ -1,11 +1,14 @@
 package queue
 
 import (
+	"encoding/json"
 	"errors"
+	"os"
 	"sync"
 )
 
 // var queueFile = "queue/jobs.json"
+var historyFile = "queue/jobs_history.json"
 var queueLock sync.Mutex
 
 func Enqueue(job QueueJob) error {
@@ -87,6 +90,29 @@ func RemoveJobByID(jobID string) error {
 }
 
 func UpdateJobStatus(jobID string, status string) error {
+	// 	queueLock.Lock()
+	// 	defer queueLock.Unlock()
+
+	// 	jobs, err := LoadQueue()
+	// 	if err != nil {
+	// 		return err
+	// 	}
+
+	// 	updated := false
+	// 	for i := range jobs {
+	// 		if jobs[i].JobID == jobID {
+	// 			jobs[i].Status = status
+	// 			updated = true
+	// 			break
+	// 		}
+	// 	}
+
+	// 	if !updated {
+	// 		return errors.New("job not found in queue")
+	// 	}
+
+	// 	return saveQueue(jobs)
+	// }
 	queueLock.Lock()
 	defer queueLock.Unlock()
 
@@ -95,10 +121,12 @@ func UpdateJobStatus(jobID string, status string) error {
 		return err
 	}
 
+	var updatedJob *QueueJob
 	updated := false
 	for i := range jobs {
 		if jobs[i].JobID == jobID {
 			jobs[i].Status = status
+			updatedJob = &jobs[i]
 			updated = true
 			break
 		}
@@ -108,7 +136,50 @@ func UpdateJobStatus(jobID string, status string) error {
 		return errors.New("job not found in queue")
 	}
 
-	return saveQueue(jobs)
+	// Save updated queue
+	err = saveQueue(jobs)
+	if err != nil {
+		return err
+	}
+
+	// Save job to history
+	return appendJobHistory(*updatedJob)
+}
+
+func appendJobHistory(job QueueJob) error {
+	var history []QueueJob
+
+	data, err := os.ReadFile(historyFile)
+	if err == nil {
+		_ = json.Unmarshal(data, &history)
+	}
+
+	history = append(history, job)
+
+	out, err := json.MarshalIndent(history, "", "  ")
+	if err != nil {
+		return err
+	}
+
+	return os.WriteFile(historyFile, out, 0644)
+}
+
+func loadJobHistory() ([]QueueJob, error) {
+	data, err := os.ReadFile(historyFile)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return []QueueJob{}, nil
+		}
+		return nil, err
+	}
+
+	var history []QueueJob
+	err = json.Unmarshal(data, &history)
+	if err != nil {
+		return nil, err
+	}
+
+	return history, nil
 }
 
 func GetJobByID(jobID string) (*QueueJob, error) {

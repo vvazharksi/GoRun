@@ -35,6 +35,7 @@ func ExecuteJob(qj *queue.QueueJob) error {
 }
 
 func StartJobWorker() {
+	startedAtMap := make(map[string]time.Time) // pipelineID -> started time
 	fmt.Println("Job worker started...")
 	for {
 		waitingJobs, err := queue.ListWaitingJobs()
@@ -52,10 +53,6 @@ func StartJobWorker() {
 		// Take the first job
 		jobMeta := waitingJobs[0]
 
-		// Find the actual job struct (from pipeline or in-memory map)
-		// Ideally, you'd keep a map[pipelineID][jobID] -> Job struct
-		// For now: assume you can load it from queue or store it globally
-
 		// This is placeholder:
 		job, err := queue.GetJobByID(jobMeta.JobID)
 		if err != nil {
@@ -64,6 +61,11 @@ func StartJobWorker() {
 		}
 
 		fmt.Printf("Executing job: %s\n", job.Name)
+
+		if _, exists := startedAtMap[job.PipelineID]; !exists {
+			startedAtMap[job.PipelineID] = time.Now()
+		}
+
 		err = ExecuteJob(job)
 		if err != nil {
 			fmt.Printf("Job %s failed: %v\n", job.Name, err)
@@ -75,5 +77,26 @@ func StartJobWorker() {
 
 		// Remove from queue
 		_ = queue.RemoveJobByID(jobMeta.JobID)
+
+		done, _, err := queue.AreAllJobsCompleted(job.PipelineID)
+		if err != nil {
+			log.Printf("Error checking pipeline status: %v", err)
+		}
+
+		if done {
+			pStatus, err := queue.GeneratePipelineStatus(job.PipelineID, startedAtMap[job.PipelineID])
+			if err != nil {
+				log.Printf("Error generating pipeline status: %v", err)
+			} else {
+				err = queue.SavePipelineStatus(pStatus)
+				if err != nil {
+					log.Printf("Error saving pipeline status: %v", err)
+				} else {
+					log.Printf("Pipeline %s completed with status: %s", job.PipelineID, pStatus.Status)
+				}
+			}
+			os.Exit(0)
+		}
+
 	}
 }

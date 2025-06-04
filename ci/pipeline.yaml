@@ -37,7 +37,8 @@ jobs:
       SECOND_VAR: ":)"
     action:
       script:
-        - echo "Bye!"
+        - echo "$FIRST_VAR $SECOND_VAR"
+        # - exit 1
 
   # - name: myExecuteJob
   #   stage: execute

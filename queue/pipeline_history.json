@@ -1,0 +1,70 @@
+[
+  {
+    "pipeline_id": "250605001929213",
+    "status": "success",
+    "jobs": {
+      "myFirstInitJob": {
+        "status": "done"
+      },
+      "mySecondInitJob": {
+        "status": "done"
+      },
+      "myThirdInitJob": {
+        "status": "done"
+      }
+    },
+    "started_at": "2025-06-05T00:19:29+03:00",
+    "finished_at": "2025-06-05T00:19:41+03:00"
+  },
+  {
+    "pipeline_id": "250605001947846",
+    "status": "success",
+    "jobs": {
+      "myFirstInitJob": {
+        "status": "done"
+      },
+      "mySecondInitJob": {
+        "status": "done"
+      },
+      "myThirdInitJob": {
+        "status": "done"
+      }
+    },
+    "started_at": "2025-06-05T00:19:47+03:00",
+    "finished_at": "2025-06-05T00:19:59+03:00"
+  },
+  {
+    "pipeline_id": "250605002004037",
+    "status": "success",
+    "jobs": {
+      "myFirstInitJob": {
+        "status": "done"
+      },
+      "mySecondInitJob": {
+        "status": "done"
+      },
+      "myThirdInitJob": {
+        "status": "done"
+      }
+    },
+    "started_at": "2025-06-05T00:20:04+03:00",
+    "finished_at": "2025-06-05T00:20:16+03:00"
+  },
+  {
+    "pipeline_id": "250605002242981",
+    "status": "failed",
+    "jobs": {
+      "myFirstInitJob": {
+        "status": "done"
+      },
+      "mySecondInitJob": {
+        "status": "done"
+      },
+      "myThirdInitJob": {
+        "status": "failed"
+      }
+    },
+    "started_at": "2025-06-05T00:22:42+03:00",
+    "finished_at": "2025-06-05T00:22:54+03:00"
+  }
+]

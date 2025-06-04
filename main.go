@@ -74,11 +74,22 @@ func main() {
 
 }
 
-// Stage1:
+// Roadmap:
+//
+// save job execution logs stdout
+// create artifacts and share them with jobs defined under `dependencies`
+// create concept of global variables
+//
+// create logic of project to have the pipeline under, create concept of project variables ,keep logs under project, project to have ID, use the project ID for the runner path alongside job id
+// allow project to be fetched from github for the pipeline code
+// use DB instead of files
+// create cli UI
+//
+// introduce kubelet or minikube for runners orchastration
 // create runner_config and setup the runner
-// create funtion that will be called from each job and will init the runner based on the job and execute it
-// create socket to get the logs from the execution on the runner
-// create failure detection
-
-// Stage2:
-// create API to get the pipeline.yaml file from github
+// connect to ec2 for job execution
+//
+// add basic concept of users
+// add permissions
+//
+// tf plugin as ci definition and run

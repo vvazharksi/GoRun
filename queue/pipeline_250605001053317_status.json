@@ -1,0 +1,17 @@
+{
+  "pipeline_id": "250605001053317",
+  "status": "success",
+  "jobs": {
+    "myFirstInitJob": {
+      "status": "done"
+    },
+    "mySecondInitJob": {
+      "status": "done"
+    },
+    "myThirdInitJob": {
+      "status": "done"
+    }
+  },
+  "started_at": "2025-06-05T00:10:53+03:00",
+  "finished_at": "2025-06-05T00:11:05+03:00"
+}
